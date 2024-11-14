@@ -36,7 +36,11 @@ body {
 
 /* تخصيص شريط التنقل */
 .navbar {
-  background: linear-gradient(to right, #000000, #027386);
+  background: linear-gradient(
+    150deg,
+    rgba(119, 208, 215, 0.865),
+    rgba(0, 0, 0, 0.847)
+  ); /* تدرج لون خلفية */
   padding: 10px 30px; /* زيادة الحشوة */
   font-size: 25px;
   font-weight: 600;
@@ -49,7 +53,7 @@ body {
 }
 
 .nav-link:after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   background: #ffffff;
@@ -61,7 +65,13 @@ body {
 .nav-link:hover:after {
   width: 100%; /* عرض شريط تحت الرابط عند التحويم */
 }
-
+.icons-R{
+  overflow: hidden;
+position: absolute;
+top: 0px;
+right:0px;
+left: 0PX;
+}
 /* قسم الصفحة الرئيسية */
 #home {
   position: relative;
@@ -98,7 +108,7 @@ body {
 /* تنسيق النص */
 .container {
   z-index: 1;
-  display:flexbox;
+  display: flexbox;
   flex-wrap: wrap; /* لتناسب العناصر بشكل أفضل */
   justify-content: space-around; /* توزيع العناصر */
 }
@@ -109,6 +119,13 @@ body {
 }
 
 /* المنتجات */
+.products {
+  background: linear-gradient(
+    150deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(34, 97, 106, 0.8)
+  ); /* تدرج لون خلفية */
+}
 .card {
   border: none;
   border-radius: 10px; /* زوايا دائرية */
@@ -147,6 +164,7 @@ body {
 /* قسم الأخبار المحسن */
 #news {
   background-color: #222;
+  padding: 20px;
 }
 
 #news h2 {
@@ -202,14 +220,13 @@ body {
   color: white;
   margin: 0 15px;
   font-size: 2.5rem;
-  transition: transform 0.3s, color 0.3s; /* إضافة تأثيرات */
+  transition: transform 0.3s ease, color 0.3s ease; /* إضافة تأثيرات */
 }
 
 .social-icon:hover {
-  color: #027386; /* لون مختلف عند التحويم */
-  transform: scale(1.1); /* تكبير الأيقونة عند التحويم */
+  color: #27baba; /* لون مختلف عند التحويم */
+  transform: scale(1.2); /* تكبير الأيقونة عند التحويم */
 }
-
 /*gem*/
 
 .text-danger {
@@ -229,7 +246,7 @@ body {
   text-align: center;
   padding: 50px;
   background: linear-gradient(
-    150deg,
+    -160deg,
     rgba(34, 97, 106, 0.8),
     rgba(0, 0, 0, 0.5)
   ); /* تدرج لون خلفية */
@@ -252,17 +269,22 @@ body {
 }
 
 .discord-button {
+  padding: 12px 24px;
+  font-size: 1.3rem;
+  transition: background 0.9s ease, color 0.3s ease;
   margin-top: 30px;
-  background-color: #5865f2;
+  background: linear-gradient(to right, #ffffff2a, #0286862c);
   color: white;
-  padding: 10px 20px;
   border-radius: 25px;
   text-decoration: none;
-  font-size: 1.2rem;
 }
 
 .discord-button:hover {
-  background-color: #ffffff;
+  background: linear-gradient(to right, #ffffff, #028686);
+  color: #333;
+  border-radius: 25px;
+  text-decoration: none;
+  transition-delay: 0.2s; /* تأخير التحويم لمدة 0.2 ثانية */
 }
 
 .admin {
@@ -274,6 +296,28 @@ body {
   margin-left: 5px;
 }
 
+.item {
+  z-index: 1;
+}
+
+.item-1 {
+  position: absolute;
+}
+
+.item-2 {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.6;
+  top: 840px;
+  right: 390px;
+}
+
+.discord-status {
+  padding: 20px;
+  text-align: right;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
 /* لتسهيل التنقل بين الصور بالنقر على الشريط السفلي  */
 
 .swiper-container {
@@ -337,4 +381,104 @@ body {
   background-color: #222;
   color: #fff;
   padding: 20px 0;
+}
+
+/* تحسين العرض على الأجهزة الصغيرة */
+@media (max-width: 768px) {
+  .activation-section h1 {
+    font-size: 1.5rem; /* تقليل حجم الخط للعناوين */
+  }
+
+  .activation-section h3 {
+    font-size: 1.2rem; /* تقليل حجم الخط للعناوين الفرعية */
+  }
+
+  .discord-button {
+    width: 100%; /* الزر يأخذ العرض الكامل */
+    font-size: 1rem; /* تقليل حجم الخط للزر */
+  }
+  .discord-status {
+    display: none;
+  }
+
+  .activation-section {
+    text-align: center; /* محاذاة النص إلى الوسط */
+  }
+
+  .activation-section h1 {
+    font-size: 1.8rem; /* تقليل حجم الخط للعناوين */
+  }
+
+  .activation-section h3 {
+    font-size: 1.5rem; /* تقليل حجم الخط للعناوين الفرعية */
+  }
+
+  .item {
+    display: flex; /* استخدام الفليكس لجعل العناصر متجاوبة */
+    flex-direction: column; /* عمود ليتناسب مع الشاشات الصغيرة */
+    align-items: center; /* محاذاة العناصر إلى الوسط */
+    margin-bottom: 20px; /* تباعد بين العناصر */
+  }
+.item img {
+  max-width: 100%;
+  height: auto; /* الحفاظ على نسبة الطول إلى العرض */
+  border-radius: 10px; /* زوايا دائرية للصورة */
+}
+
+  .discord-status {
+    width: 100%; /* تأكد من أن حالة Discord تأخذ العرض الكامل */
+    margin-top: 20px; /* تباعد أعلى */
+  }
+
+  .discord-button {
+    width: 100%; /* تأكد من أن الزر يأخذ العرض الكامل */
+    font-size: 1.1rem; /* تعديل حجم الخط للزر */
+  }
+
+.discord-button {
+  transition: transform 0.3s;
+}
+
+.discord-button:hover {
+  transform: scale(1.1);
+}
+
+  .navbar {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+
+  .navbar .nav-link {
+    margin-left: 15px;
+    font-size: 1rem;
+  }
+
+  #home h1,
+  #home p {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+  }
+
+  .social-icon {
+    font-size: 2rem;
+  }
+}
+
+/* تحسين العرض على الأجهزة الكبيرة */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .card {
+    flex: 1 1 350px;
+  }
 }

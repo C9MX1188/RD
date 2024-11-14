@@ -24,15 +24,19 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css"
+    />
+
+    <link
+      rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
     <!-- شريط التنقل -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="#">RIEDER</a>
+      <a class="navbar-brand" href="#"> </a>
       <button
         class="navbar-toggler"
         type="button"
@@ -44,6 +48,7 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
+      <div class="icons-R"><img style="width: 100px;" src="img/1031.gif" alt=""></div>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
@@ -55,6 +60,9 @@
           <li class="nav-item"><a class="nav-link" href="#news">الأخبار</a></li>
           <li class="nav-item">
             <a class="nav-link" href="#requirements">متطلبات اللعبة</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://cfx.re/join/7axp3r">دخول سيرفر</a>
           </li>
         </ul>
       </div>
@@ -70,60 +78,65 @@
           class="slide active"
           style="background-image: url('img/RD-1.png')"
         ></div>
-        <div class="slide" style="background-image: url('img/IMG_1277.jpg')"></div>
-        <div class="slide" style="background-image: url('img/IMG_1278.jpg')"></div>
+        <div
+          class="slide"
+          style="background-image: url('img/IMG_1277.jpg')"
+        ></div>
+        <div
+          class="slide"
+          style="background-image: url('img/IMG_1278.jpg')"
+        ></div>
       </div>
       <div class="container text-light">
-        <h1 class="display-4">RIEDER مرحبًا بكم في سيرفر</h1>
-        <p class="lead">FiveM السيارات وأحدث الأخبار استمتع بأفضل سيرفر لي </p>
+        <h1 data-aos="flip-up" class="display-4"> مرحبًا بكم في سيرفر</h1>
+        <p class="lead">قريبًا</p>
       </div>
     </section>
-    <section class="conr">
+    <!-- قسم التفعيل -->
+    <section class="activation-section text-center">
+      <div data-aos="fade-right" class="item item-1">
+        <h3>لتفعيل</h3>
+        <h1>طلب التفعيل بالسيرفر الدسكورد</h1>
+        <p>
+          لطلب تفعيلك بالسيرفر يجب عليك قراءة الشروط وحفظها كاملة لتفعيلك بشكل
+          صحيح
+        </p>
+        <p>للتواصل مع الأدمنية عن طريق فتح تيكيت</p>
+        <div class="admin"><span class="text-danger">RIEDER</span></div>
+        <br />
 
-    
-        <div class="swiper-div">
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img class="slider-image" src="img/IMG_1285.jpg" alt="Image 1" />
-              </div>
-              <div class="swiper-slide">
-                <img class="slider-image" src="img/kane.png" alt="Image 2" />
-              </div>
-              <div class="swiper-slide">
-                <img class="slider-image" src="img/image.png" alt="Image 3" />
-              </div>
-              <div class="swiper-slide">
-                <img class="slider-image" src="img/banner.jpg" alt="Image 4" />
-              </div>
-              <div class="swiper-slide">
-                <img class="slider-image" src="img/banner.jpg" alt="Image 5" />
-              </div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-          </div>
+        <a
+          href="https://discord.gg/NkKZHzHgJ5"
+          target="_blank"
+          class="discord-button"
+        >
+          <i class="fab fa-discord"></i> Discord
+        </a>
+      </div>
+      <div  class="item item-2">
+        <img src="img/logo-187456c5.png" alt="" />
+      </div>
+      <!--سيرفرنا على ديسكورد -->
+      <div  data-aos="fade-left" class="discord-status">
+        <div id="memberCount">
+          <iframe
+            src="https://discord.com/widget?id=1255744346272174243&theme=dark"
+            width="350"
+            height="500"
+            allowtransparency="true"
+            frameborder="0"
+          ></iframe>
         </div>
-        
-        <div class="text">
-          <h2> بي شكل مختلف؟ RP جاهز لتجربة لعب</h2>
-          <p>
-            <span style="color: rgb(231, 253, 255)">انضم اليوم</span>
-            <span style="color: red">وكن جزءًا من شيء غير عادي</span>
-          </p>
-        </div>
-
+      </div>
     </section>
-    
     <!-- قسم المنتجات -->
-    <section id="products" class="py-5">
-      <div class="container">
+    <section id="products" class="py-5 products">
+      <div data-aos="fade" class="container">
         <h2 class="text-center mb-4">المنتجات</h2>
         <div class="row">
           <div class="col-md-4">
             <div class="card shadow">
-              <img src="img/R.png" class="card-img-top" alt="سيارة 1" />
+              <img src="img/IMG_1277.jpg" class="card-img-top" alt="سيارة 1" />
               <div class="card-body">
                 <h5 class="card-title">قريبًا</h5>
                 <p class="card-text">سعر: 0000 دولار داخل اللعبة</p>
@@ -132,7 +145,43 @@
           </div>
           <div class="col-md-4">
             <div class="card shadow">
-              <img src="img/R.png" class="card-img-top" alt="سيارة 2" />
+              <img src="img/IMG_1277.jpg" class="card-img-top" alt="سيارة 2" />
+              <div class="card-body">
+                <h5 class="card-title">قريبًا</h5>
+                <p class="card-text">سعر: 0000 دولار داخل اللعبة</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img src="img/IMG_1277.jpg" class="card-img-top" alt="سيارة 1" />
+              <div class="card-body">
+                <h5 class="card-title">قريبًا</h5>
+                <p class="card-text">سعر: 0000 دولار داخل اللعبة</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img src="img/IMG_1277.jpg" class="card-img-top" alt="سيارة 1" />
+              <div class="card-body">
+                <h5 class="card-title">قريبًا</h5>
+                <p class="card-text">سعر: 0000 دولار داخل اللعبة</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img src="img/IMG_1277.jpg" class="card-img-top" alt="سيارة 1" />
+              <div class="card-body">
+                <h5 class="card-title">قريبًا</h5>
+                <p class="card-text">سعر: 0000 دولار داخل اللعبة</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img src="img/IMG_1277.jpg" class="card-img-top" alt="سيارة 1" />
               <div class="card-body">
                 <h5 class="card-title">قريبًا</h5>
                 <p class="card-text">سعر: 0000 دولار داخل اللعبة</p>
@@ -145,7 +194,7 @@
 
     <!-- قسم متطلبات اللعبة -->
     <section id="requirements" class="py-5 bg-dark text-light">
-      <div class="container">
+      <div data-aos="fade-up" class="container">
         <h2 class="text-center mb-4">متطلبات اللعبة</h2>
         <div class="row text-center">
           <div class="col-md-4">
@@ -191,13 +240,22 @@
     </section>
 
     <!-- قسم الأخبار -->
-    <section id="news" class="py-5 bg-light text-dark">
-      <div class="container">
-        <h2 class="text-center mb-5">أحدث الأخبار</h2>
+    <section id="news" class="py-5 bg-dark text-dark">
+      <div data-aos="fade-up" class="container">
+        <h2 class="text-center mb-5 text-light">أحدث الأخبار</h2>
         <div class="row">
           <div class="col-md-6 mb-4">
             <div class="card shadow-sm h-100">
-              <img src="img/RD-1.png" class="card-img-top" alt="خبر 1" />
+              <iframe
+                width="AUTO"
+                height="AUTO"
+                src="https://www.youtube.com/embed/n6cU9U5pLqk"
+                title="Coming soon city of X3F6 (S6)"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
               <div class="card-body">
                 <h5 class="card-title">تحديث جديد قادم!</h5>
                 <p>
@@ -212,7 +270,7 @@
           </div>
           <div class="col-md-6 mb-4">
             <div class="card shadow-sm h-100">
-              <img src="img/RD-1.png" class="card-img-top" alt="خبر 2" />
+              <img src="img/IMG_1277.jpg" class="card-img-top" alt="خبر 2" />
               <div class="card-body">
                 <h5 class="card-title">حدث خاص في السيرفر!</h5>
                 <p>
@@ -229,30 +287,12 @@
       </div>
     </section>
 
-    <!-- قسم التفعيل -->
-    <section class="activation-section text-center">
-      <h3>لتفعيل</h3>
-      <h1>طلب التفعيل بالسيرفر الدسكورد</h1>
-      <p>
-        لطلب تفعيلك بالسيرفر يجب عليك قراءة الشروط وحفظها كاملة لتفعيلك بشكل
-        صحيح
-      </p>
-      <p>للتواصل مع الأدمنية عن طريق فتح تيكيت</p>
-      <div class="admin"><span class="text-danger">RIEDER</span></div>
-      <br />
-      <a
-        href="https://discord.gg/NkKZHzHgJ5"
-        target="_blank"
-        class="discord-button"
-        ><i class="fab fa-discord"></i> Discord</a
-      >
-    </section>
-
     <!-- تواصل -->
     <footer class="bg-dark text-light text-center py-3">
       <section id="social-media" class="py-5 bg-dark text-light text-center">
-        <div class="container">
+        <div data-aos="fade-up" class="container">
           <h2>تواصل معنا</h2>
+          
           <div class="social-icons">
             <a
               href="https://discord.gg/NkKZHzHgJ5"
@@ -284,6 +324,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script src="https://cdn.statuspage.io/se-v2.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
