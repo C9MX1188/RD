@@ -36,7 +36,9 @@
   <body>
     <!-- شريط التنقل -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="#"> </a>
+      <a class="navbar-brand" href="#">
+        <img src="img/1031.gif" alt="RIEDER" style="width: 50px" /> RIEDER
+      </a>
       <button
         class="navbar-toggler"
         type="button"
@@ -48,11 +50,20 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="icons-R"><img style="width: 100px;" src="img/1031.gif" alt=""></div>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#home">الرئيسية</a>
+            <a class="nav-link" href="index.html">الرئيسية</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="team.html">فريق العمل</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="https://docs.google.com/document/d/12a-mY9RG8KvAFV7GUMqDQoL4Nvi3nRLVWz4bjmvy7kY/edit?usp=sharing"
+              >القوانين</a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#products">المنتجات</a>
@@ -62,9 +73,19 @@
             <a class="nav-link" href="#requirements">متطلبات اللعبة</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://cfx.re/join/7axp3r">دخول سيرفر</a>
+            <a class="nav-link" href="https://cfx.re/join/7axp3r"
+              >دخول السيرفر</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">تسجيل الدخول</a>
           </li>
         </ul>
+      </div>
+      <!-- المكان لعرض اسم وصورة المستخدم -->
+      <div id="user-info">
+        <p id="username"></p>
+        <img id="user-avatar" src="" />
       </div>
     </nav>
 
@@ -88,7 +109,7 @@
         ></div>
       </div>
       <div class="container text-light">
-        <h1 data-aos="flip-up" class="display-4"> مرحبًا بكم في سيرفر</h1>
+        <h1 data-aos="flip-up" class="display-4">مرحبًا بكم في سيرفر</h1>
         <p class="lead">قريبًا</p>
       </div>
     </section>
@@ -113,11 +134,11 @@
           <i class="fab fa-discord"></i> Discord
         </a>
       </div>
-      <div  class="item item-2">
+      <div class="item item-2">
         <img src="img/logo-187456c5.png" alt="" />
       </div>
       <!--سيرفرنا على ديسكورد -->
-      <div  data-aos="fade-left" class="discord-status">
+      <div data-aos="fade-left" class="discord-status">
         <div id="memberCount">
           <iframe
             src="https://discord.com/widget?id=1255744346272174243&theme=dark"
@@ -292,7 +313,7 @@
       <section id="social-media" class="py-5 bg-dark text-light text-center">
         <div data-aos="fade-up" class="container">
           <h2>تواصل معنا</h2>
-          
+
           <div class="social-icons">
             <a
               href="https://discord.gg/NkKZHzHgJ5"
@@ -327,5 +348,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
     <script src="https://cdn.statuspage.io/se-v2.js"></script>
     <script src="script.js"></script>
+    <script src="Node.js"></script>
   </body>
 </html>

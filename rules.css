@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #027386;
+  }
+  
+  @font-face {
+    font-family: "RIEDER1";
+    src: url(font/OriginTech_personal_use.otf);
+  }
+  
+  @font-face {
+    font-family: "RIEDER2";
+    src: url(font/ReemKufi-Regular-2_2.ttf);
+  }
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #027386;
+  }
+  
+
+/* تخصيص شريط التنقل */
+.navbar {
+    background: linear-gradient(
+      150deg,
+      rgba(119, 208, 215, 0.865),
+      rgba(0, 0, 0, 0.847)
+    ); /* تدرج لون خلفية */
+    padding: 10px 30px; /* زيادة الحشوة */
+    font-size: 25px;
+    font-weight: 600;
+  }
+  
+  .nav-link {
+    color: #ffffff !important; /* لون النص في الروابط */
+    margin-left: 30px;
+    position: relative;
+  }
+  
+  .nav-link:after {
+    content: "";
+    display: block;
+    height: 3px;
+    background: #ffffff;
+    transition: width 0.3s;
+    width: 0;
+    margin: auto;
+  }
+  
+  .nav-link:hover:after {
+    width: 100%; /* عرض شريط تحت الرابط عند التحويم */
+  }
+  .icons-R{
+    overflow: hidden;
+  position: absolute;
+  top: 0px;
+  right:0px;
+  left: 0PX;
+  }
+/* تنسيق العنوان */
+header h1 {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* تنسيق للقائمة */
+section ol {
+    font-size: 1.2rem;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+section ol li {
+    margin: 10px 0;
+}

@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #027386;
+  }
+  
+  @font-face {
+    font-family: "RIEDER1";
+    src: url(font/OriginTech_personal_use.otf);
+  }
+  
+  @font-face {
+    font-family: "RIEDER2";
+    src: url(font/ReemKufi-Regular-2_2.ttf);
+  }
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #027386;
+  }
+  
+/* تصميم الصفحة بالكامل */
+body {
+  font-family: "Cairo", sans-serif; /* أو الخط الذي تفضله */
+  background-color: #2c3e50;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* تصميم الحاوية */
+.login-container {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* العنوان */
+.login-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #f1c40f;
+}
+
+/* الحقول */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background: #2c3e50;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.login-container input[type="text"]::placeholder,
+.login-container input[type="password"]::placeholder {
+  color: #95a5a6;
+}
+
+/* الأزرار */
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #e52e71;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-container button:hover {
+  background: #ff8c00;
+}
+
+/* الروابط */
+.login-container a {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: #f1c40f;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.login-container a:hover {
+  color: #ff8c00;
+}
+
+/* إضافات */
+.login-container .footer-text {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+
+/* تخصيص شريط التنقل */
+.navbar {
+    background: linear-gradient(
+      150deg,
+      rgba(119, 208, 215, 0.865),
+      rgba(0, 0, 0, 0.847)
+    ); /* تدرج لون خلفية */
+    padding: 10px 30px; /* زيادة الحشوة */
+    font-size: 25px;
+    font-weight: 600;
+  }
+  
+  .nav-link {
+    color: #ffffff !important; /* لون النص في الروابط */
+    margin-left: 30px;
+    position: relative;
+  }
+  
+  .nav-link:after {
+    content: "";
+    display: block;
+    height: 3px;
+    background: #ffffff;
+    transition: width 0.3s;
+    width: 0;
+    margin: auto;
+  }
+  
+  .nav-link:hover:after {
+    width: 100%; /* عرض شريط تحت الرابط عند التحويم */
+  }
+  .icons-R{
+    overflow: hidden;
+  position: absolute;
+  top: 0px;
+  right:0px;
+  left: 0PX;
+  }
