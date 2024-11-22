@@ -6,7 +6,7 @@ const port = 3000;
 // بيانات الـ OAuth2 الخاصة بك
 const CLIENT_ID = '1268813370459688970';
 const CLIENT_SECRET = 'eXz2oALGdP580KV4ZnUE74_ny8iBX43X';
-const REDIRECT_URI = 'https://rieder.netlify.app/';
+const REDIRECT_URI = 'https://rieder.netlify.app/test';
 
 // إعداد خادم Express
 app.get('/auth/discord', async (req, res) => {
