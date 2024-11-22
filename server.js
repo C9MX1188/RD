@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 });
 
 // إعادة توجيه المستخدم إلى Discord OAuth2
-app.get('/auth/discord', (req, res) => {
+app.get('https://rieder.netlify.app/test', (req, res) => {
   const discordAuthURL = `https://discord.com/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&response_type=code&scope=identify`;
   res.redirect(discordAuthURL);
 });
