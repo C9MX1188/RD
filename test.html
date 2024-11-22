@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="مرحبًا بكم في RIEDER، السيرفر النهائي لـ FiveM لتجربة RP الرائعة.">
+  <title>RIEDER - بيانات المستخدم</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      padding: 20px;
+      text-align: center;
+    }
+    #header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    #server-name {
+      font-size: 20px;
+      margin-right: 10px;
+      font-weight: bold;
+      color: #007bff;
+    }
+    #user-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid #007bff;
+    }
+    #user-info {
+      margin-top: 20px;
+    }
+    #user-info h2 {
+      color: #007bff;
+    }
+    form {
+      margin-top: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+    .form-group label {
+      font-weight: bold;
+    }
+    .form-group textarea {
+      resize: none;
+    }
+    .btn-submit {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- الرأس -->
+  <div id="header">
+    <span id="server-name">RIEDER Server</span>
+    <img id="user-avatar" src="" alt="صورة المستخدم">
+  </div>
+
+  <!-- معلومات المستخدم -->
+  <div id="user-info">
+    <h2 id="username">اسم المستخدم</h2>
+  </div>
+
+  <!-- نموذج البيانات -->
+  <form id="user-form">
+    <div class="form-group">
+      <label for="real-name">اسم المستخدم:</label>
+      <input type="text" id="real-name" class="form-control" placeholder="أدخل اسمك هنا" required>
+    </div>
+    <div class="form-group">
+      <label for="age">العمر:</label>
+      <input type="number" id="age" class="form-control" placeholder="أدخل عمرك" required>
+    </div>
+    <div class="form-group">
+      <label for="story">قصة الشخصية الخيالية:</label>
+      <textarea id="story" class="form-control" rows="5" placeholder="أدخل قصتك هنا" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="discord-id">معرّف Discord:</label>
+      <input type="text" id="discord-id" class="form-control" placeholder="أدخل معرّف Discord الخاص بك" required>
+    </div>
+    <button type="submit" class="btn btn-submit btn-block">إرسال</button>
+  </form>
+
+  <!-- سكربت جلب البيانات -->
+  <script>
+    const accessToken = 'MTI2ODgxMzM3MDQ1OTY4ODk3MA.GplqkS.IGivte5YHvYcuSJ02iux_IIipg2iGsgiYYNf00';
+
+    // جلب بيانات المستخدم من Discord API
+    function getUserData() {
+      $.ajax({
+        url: 'https://discord.com/api/v10/users/@me',
+        type: 'GET',
+        headers: {
+          Authorization: `Bearer ${accessToken}`
+        },
+        success: function(data) {
+          // تحديث المعلومات
+          $('#username').text(data.username);
+          $('#user-avatar').attr('src', `https://cdn.discordapp.com/avatars/${data.id}/${data.avatar}.png`);
+        },
+        error: function() {
+          alert('حدث خطأ في استرجاع بيانات المستخدم. تأكد من صحة Access Token.');
+        }
+      });
+    }
+
+    // استدعاء الدالة عند تحميل الصفحة
+    $(document).ready(function() {
+      getUserData();
+
+      // حدث عند إرسال النموذج
+      $('#user-form').on('submit', function(event) {
+        event.preventDefault();
+        const realName = $('#real-name').val();
+        const age = $('#age').val();
+        const story = $('#story').val();
+        const discordId = $('#discord-id').val();
+
+        alert(`تم إرسال البيانات بنجاح:\n\nالاسم: ${realName}\nالعمر: ${age}\nالقصة: ${story}\nمعرّف Discord: ${discordId}`);
+      });
+    });
+  </script>
+    <script src="server.js"></script>
+</body>
+</html>
