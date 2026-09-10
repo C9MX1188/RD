@@ -1,2 +1,1 @@
-# RD
-RD
+The RIEDER FiveM server website features promotional offers, tutorial videos, and vehicle handling settings, alongside gameplay clips. It also includes a store showcasing purchasable in-game items, such as custom cars or private homes.
